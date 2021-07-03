@@ -1,0 +1,11 @@
+type City {
+	id:ID!
+	name:String!
+	countryId:String!
+}
+
+type Query {
+	allCities:[City]
+	city(id:String!):City
+	citiesInCountry(countryId:String!):[City]
+}

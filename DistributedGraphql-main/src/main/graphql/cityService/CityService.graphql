@@ -1,0 +1,23 @@
+fragment CityFragment on City {
+	id
+	name
+	countryId
+}
+
+query GetAllCities {
+	allCities{
+		...CityFragment
+	}
+}
+
+query GetCity($id:String!) {
+	city(id:$id) {
+		...CityFragment
+	}
+}
+
+query GetCitiesInCountry($countryId:String!) {
+	citiesInCountry(countryId:$countryId) {
+		...CityFragment
+	}
+}

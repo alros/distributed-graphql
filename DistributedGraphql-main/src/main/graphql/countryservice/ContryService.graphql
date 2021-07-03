@@ -1,0 +1,16 @@
+fragment CountryFragment on Country {
+	id
+	name
+}
+
+query GetAllCountries {
+	allCountries{
+		...CountryFragment
+	}
+}
+
+query GetCountry($id:String!){
+	country(id:$id){
+  		...CountryFragment
+  	}
+}

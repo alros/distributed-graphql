@@ -1,0 +1,9 @@
+type Country {
+	id:ID!
+	name:String!
+}
+
+type Query {
+	allCountries:[Country]
+	country(id:String!):Country
+}
