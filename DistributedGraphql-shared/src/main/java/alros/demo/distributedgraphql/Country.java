@@ -21,4 +21,9 @@ public class Country {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Country [id=" + id + ", name=" + name + "]";
+	}
+
 }
